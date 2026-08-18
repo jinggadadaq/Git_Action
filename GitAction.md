@@ -1,5 +1,5 @@
 # MODUL PEMBELAJARAN PERSIAPAN LKS
-## Cloud Computing / DevOps — GitHub Actions (CI/CD) & AWS CloudFormation (IaC)
+  ## Cloud Computing / DevOps — GitHub Actions (CI/CD) & AWS CloudFormation (IaC)
 
 **Level:** SMK / Persiapan LKS Provinsi–Nasional
 **Metode:** Theory → Demonstration → Guided Lab → Independent Lab → Challenge → Evaluation

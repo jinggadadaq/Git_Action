@@ -1,11 +1,10 @@
-#  Git Action — Persiapan LKS DevOps / Cloud Computing
+#  Sripilan yang harus di install
 
-Repositori ini berisi modul latihan **GitHub Actions (CI/CD)** dan **AWS CloudFormation (IaC)** untuk persiapan LKS SMK tingkat Provinsi–Nasional.
 
 **Modul lengkap:** [GitAction.md](./GitAction.md)
 
 
-##  Yang Perlu Disiapkan Sebelum Latihan
+##  Alat sing di butuhkn
 
 ### 1. Akun & Platform
 
