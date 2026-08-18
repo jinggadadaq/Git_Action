@@ -24,7 +24,7 @@ Sudah paham: dasar komputer, dasar Linux (cd, ls, cat, nano), dasar jaringan (IP
 
 Belum wajib paham: GitHub Actions, CloudFormation — inilah fokus modul ini.
 
-> ⚠️ **Peringatan biaya AWS**: Sebagian besar lab di Bagian B menggunakan resource AWS (EC2, VPC) yang **berpotensi menimbulkan biaya** jika dibiarkan menyala. Setiap lab AWS di modul ini WAJIB diakhiri dengan langkah **cleanup** (`aws cloudformation delete-stack` atau delete stack via console). Jangan pernah meninggalkan stack menyala setelah selesai berlatih.
+> **Peringatan biaya AWS**: Sebagian besar lab di Bagian B menggunakan resource AWS (EC2, VPC) yang **berpotensi menimbulkan biaya** jika dibiarkan menyala. Setiap lab AWS di modul ini WAJIB diakhiri dengan langkah **cleanup** (`aws cloudformation delete-stack` atau delete stack via console). Jangan pernah meninggalkan stack menyala setelah selesai berlatih.
 
 ---
 
@@ -1301,7 +1301,7 @@ aws cloudformation deploy \
 
 **Expected Result:** Dua stack terpisah muncul di CloudFormation console, masing-masing dengan tag `Environment` sesuai parameter yang diberikan — membuktikan **satu template bisa dipakai berulang** untuk konteks berbeda.
 
-> ⚠️ Jangan lupa cleanup kedua stack setelah lab selesai (lihat Bab 18).
+> Jangan lupa cleanup kedua stack setelah lab selesai (lihat Bab 18).
 
 ---
 
@@ -1481,7 +1481,7 @@ DELETE_COMPLETE
 aws cloudformation delete-stack --stack-name lks-s3
 ```
 
-> ⚠️ **WAJIB dilakukan setiap selesai lab** — jika stack berisi EC2/NAT Gateway/dsb dibiarkan menyala, biaya akan terus berjalan meski tidak dipakai.
+> **WAJIB dilakukan setiap selesai lab** — jika stack berisi EC2/NAT Gateway/dsb dibiarkan menyala, biaya akan terus berjalan meski tidak dipakai.
 
 ## 18.4 Membaca CloudFormation Events
 
@@ -1545,7 +1545,7 @@ Perintah ini hanya mengecek **syntax dan struktur**, BUKAN mengecek apakah resou
 
 # BAB 20 — STUDI KASUS CLOUDFORMATION BERTAHAP
 
-> ⚠️ Semua Case di bawah membuat resource AWS nyata. Selalu **cleanup** (`delete-stack`) setelah setiap Case selesai diverifikasi, sebelum lanjut ke Case berikutnya.
+> Semua Case di bawah membuat resource AWS nyata. Selalu **cleanup** (`delete-stack`) setelah setiap Case selesai diverifikasi, sebelum lanjut ke Case berikutnya.
 
 ## Case 1 — S3 Bucket Sederhana
 
@@ -1923,7 +1923,7 @@ jobs:
 ## 23.1 Kenapa Credential Tidak Boleh Ditulis di YAML?
 
 ```yaml
-# ❌ JANGAN PERNAH LAKUKAN INI
+# JANGAN PERNAH LAKUKAN INI
 - run: aws configure set aws_access_key_id AKIAxxxxxxxxxxx
 ```
 
@@ -2603,36 +2603,3 @@ Format: **Problem → Possible Cause → How to Check → Solution → Preventio
 5. Delete stack CloudFormation gagal dengan status `DELETE_FAILED` karena S3 bucket tidak kosong. Jelaskan penyebabnya dan langkah penyelesaiannya!
 
 ---
-
-# ANSWER KEY
-
-## Pilihan Ganda — GitHub Actions
-1-b, 2-b, 3-c, 4-b, 5-c, 6-b, 7-b, 8-b, 9-c, 10-b, 11-b, 12-b, 13-b, 14-c, 15-b, 16-b, 17-b, 18-b, 19-b, 20-c
-
-## Pilihan Ganda — AWS CloudFormation
-1-b, 2-c, 3-b, 4-b, 5-a, 6-b, 7-b, 8-b, 9-b, 10-b, 11-b, 12-b, 13-b, 14-b, 15-b, 16-b, 17-b, 18-b, 19-b, 20-a
-
-## Benar/Salah
-1-Salah, 2-Benar, 3-Salah, 4-Benar, 5-Benar, 6-Salah, 7-Salah, 8-Salah, 9-Benar, 10-Benar
-
-## Essay & Troubleshooting
-*(Dinilai kualitatif oleh instruktur/juri berdasarkan pemahaman konsep, kelengkapan penjelasan, dan ketepatan analogi/istilah teknis yang digunakan sesuai pembahasan pada Bab 1–24.)*
-
----
-
-# PENUTUP
-
-Setelah menyelesaikan seluruh modul ini, peserta diharapkan mampu:
-
-```text
-✓ Membangun CI pipeline dari nol menggunakan GitHub Actions
-✓ Mengelola credential secara aman menggunakan Secrets
-✓ Menulis CloudFormation template dari resource sederhana hingga full-stack
-✓ Mengintegrasikan GitHub Actions dengan CloudFormation untuk deployment otomatis
-✓ Melakukan troubleshooting terhadap pipeline maupun infrastruktur yang gagal
-✓ Menerapkan praktik keamanan dasar (least privilege, tanpa credential bocor)
-```
-
-Materi lanjutan yang bisa dieksplorasi setelah modul ini (di luar cakupan modul ini): OIDC penuh untuk GitHub-AWS tanpa static key, multi-stack CloudFormation dengan Nested Stacks, serta orkestrasi container (Kubernetes/ECS) sebagai kelanjutan dari materi Docker + GHCR.
-
-**Selamat berlatih dan semoga sukses di LKS!**
