@@ -25,7 +25,7 @@
 
 > **Opsional tapi disarankan:** Ekstensi VS Code `YAML` (Red Hat) agar penulisan file `.yml` lebih nyaman (ada autocomplete & validasi syntax).
 
-### 4. Konfigurasi Git di Lokal
+### 3. Konfigurasi Git di Lokal
 
 Setelah Git terinstal, jalankan perintah ini **sekali saja** di terminal untuk mengatur identitas kamu:
 
@@ -40,7 +40,7 @@ Cek hasilnya:
 git config --list
 ```
 
-### 5. Setup Repositori Latihan
+### 4. Setup Repositori Latihan
 
 ```bash
 # Clone repo ini ke komputermu
@@ -53,7 +53,7 @@ cd Git_Action
 git checkout -b latihan/nama-kamu
 ```
 
-### 6. Struktur Folder Workflow GitHub Actions
+### 5. Struktur Folder Workflow GitHub Actions
 
 Semua file workflow GitHub Actions **wajib** diletakkan di:
 
